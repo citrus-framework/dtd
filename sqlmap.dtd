@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!ELEMENT sqlMap (select* | insert* | update* | delete* | query*)+>
+<!ELEMENT sqlMap (select* | insert* | update* | delete* | query* | statement*)+>
 <!ATTLIST sqlMap
         xmlns:fo CDATA #IMPLIED
         namespace CDATA #IMPLIED
@@ -41,6 +41,11 @@
 <!ELEMENT include EMPTY>
 <!ATTLIST include
         refid CDATA #REQUIRED
+        >
+
+<!ELEMENT statement (#PCDATA | include | isEmpty | isNotEmpty | isNotNull | isNull | isNotEqual | isEqual | isGreaterThan | isGreaterEqual | isLessThan | isLessEqual | isNumeric | isDatetime | isTrue)*>
+<!ATTLIST statement
+        id CDATA #REQUIRED
         >
 
 <!ELEMENT dynamic (#PCDATA | include | isEmpty | isNotEmpty | isNotNull | isNull | isNotEqual | isEqual | isGreaterThan | isGreaterEqual | isLessThan | isLessEqual | isNumeric | isDatetime | isTrue)*>
