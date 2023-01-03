@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!ELEMENT sqlMap (select* | insert* | update* | delete* | query*)+>
+<!ATTLIST sqlMap
+        xmlns:fo CDATA #IMPLIED
+        namespace CDATA #IMPLIED
+        >
+
+<!ELEMENT select (#PCDATA | include | dynamic)*>
+<!ATTLIST select
+        id CDATA #REQUIRED
+        parameterClass CDATA #IMPLIED
+        resultClass CDATA #IMPLIED
+        >
+
+<!ELEMENT insert (#PCDATA | include | dynamic)*>
+<!ATTLIST select
+        id CDATA #REQUIRED
+        parameterClass CDATA #IMPLIED
+        >
+
+<!ELEMENT update (#PCDATA | include | dynamic)*>
+<!ATTLIST select
+        id CDATA #REQUIRED
+        parameterClass CDATA #IMPLIED
+        >
+
+<!ELEMENT delete (#PCDATA | include | dynamic)*>
+<!ATTLIST select
+        id CDATA #REQUIRED
+        parameterClass CDATA #IMPLIED
+        >
+
+<!ELEMENT query (#PCDATA | include | dynamic)*>
+<!ATTLIST select
+        id CDATA #REQUIRED
+        parameterClass CDATA #IMPLIED
+        resultClass CDATA #IMPLIED
+        >
+
+<!ELEMENT include EMPTY>
+<!ATTLIST include
+        refid CDATA #REQUIRED
+        >
+
+<!ELEMENT dynamic (#PCDATA | include | isEmpty | isNotEmpty | isNotNull | isNull | isNotEqual | isEqual | isGreaterThan | isGreaterEqual | isLessThan | isLessEqual | isNumeric | isDatetime | isTrue)*>
+<!ATTLIST dynamic
+        prepend CDATA #IMPLIED
+        >
+
+<!ELEMENT isEmpty (#PCDATA | include | isEmpty | isNotEmpty | isNotNull | isNull | isNotEqual | isEqual | isGreaterThan | isGreaterEqual | isLessThan | isLessEqual | isNumeric | isDatetime | isTrue)*>
+<!ATTLIST dynamic
+        prepend CDATA #IMPLIED
+        property CDATA #IMPLIED
+        >
+
+<!ELEMENT isNotEmpty (#PCDATA | include | isEmpty | isNotEmpty | isNotNull | isNull | isNotEqual | isEqual | isGreaterThan | isGreaterEqual | isLessThan | isLessEqual | isNumeric | isDatetime | isTrue)*>
+<!ATTLIST dynamic
+        prepend CDATA #IMPLIED
+        property CDATA #IMPLIED
+        >
+
+<!ELEMENT isNotNull (#PCDATA | include | isEmpty | isNotEmpty | isNotNull | isNull | isNotEqual | isEqual | isGreaterThan | isGreaterEqual | isLessThan | isLessEqual | isNumeric | isDatetime | isTrue)*>
+<!ATTLIST dynamic
+        prepend CDATA #IMPLIED
+        property CDATA #IMPLIED
+        >
+
+<!ELEMENT isNull (#PCDATA | include | isEmpty | isNotEmpty | isNotNull | isNull | isNotEqual | isEqual | isGreaterThan | isGreaterEqual | isLessThan | isLessEqual | isNumeric | isDatetime | isTrue)*>
+<!ATTLIST dynamic
+        prepend CDATA #IMPLIED
+        property CDATA #IMPLIED
+        >
+
+<!ELEMENT isNotEqual (#PCDATA | include | isEmpty | isNotEmpty | isNotNull | isNull | isNotEqual | isEqual | isGreaterThan | isGreaterEqual | isLessThan | isLessEqual | isNumeric | isDatetime | isTrue)*>
+<!ATTLIST dynamic
+        prepend CDATA #IMPLIED
+        property CDATA #IMPLIED
+        >
+
+<!ELEMENT isEqual (#PCDATA | include | isEmpty | isNotEmpty | isNotNull | isNull | isNotEqual | isEqual | isGreaterThan | isGreaterEqual | isLessThan | isLessEqual | isNumeric | isDatetime | isTrue)*>
+<!ATTLIST dynamic
+        prepend CDATA #IMPLIED
+        property CDATA #IMPLIED
+        >
+
+<!ELEMENT isGreaterThan (#PCDATA | include | isEmpty | isNotEmpty | isNotNull | isNull | isNotEqual | isEqual | isGreaterThan | isGreaterEqual | isLessThan | isLessEqual | isNumeric | isDatetime | isTrue)*>
+<!ATTLIST dynamic
+        prepend CDATA #IMPLIED
+        property CDATA #IMPLIED
+        >
+
+<!ELEMENT isGreaterEqual (#PCDATA | include | isEmpty | isNotEmpty | isNotNull | isNull | isNotEqual | isEqual | isGreaterThan | isGreaterEqual | isLessThan | isLessEqual | isNumeric | isDatetime | isTrue)*>
+<!ATTLIST dynamic
+        prepend CDATA #IMPLIED
+        property CDATA #IMPLIED
+        >
+
+<!ELEMENT isLessThan (#PCDATA | include | isEmpty | isNotEmpty | isNotNull | isNull | isNotEqual | isEqual | isGreaterThan | isGreaterEqual | isLessThan | isLessEqual | isNumeric | isDatetime | isTrue)*>
+<!ATTLIST dynamic
+        prepend CDATA #IMPLIED
+        property CDATA #IMPLIED
+        >
+
+<!ELEMENT isLessEqual (#PCDATA | include | isEmpty | isNotEmpty | isNotNull | isNull | isNotEqual | isEqual | isGreaterThan | isGreaterEqual | isLessThan | isLessEqual | isNumeric | isDatetime | isTrue)*>
+<!ATTLIST dynamic
+        prepend CDATA #IMPLIED
+        property CDATA #IMPLIED
+        >
+
+<!ELEMENT isNumeric (#PCDATA | include | isEmpty | isNotEmpty | isNotNull | isNull | isNotEqual | isEqual | isGreaterThan | isGreaterEqual | isLessThan | isLessEqual | isNumeric | isDatetime | isTrue)*>
+<!ATTLIST dynamic
+        property CDATA #IMPLIED
+        >
+
+<!ELEMENT isDatetime (#PCDATA | include | isEmpty | isNotEmpty | isNotNull | isNull | isNotEqual | isEqual | isGreaterThan | isGreaterEqual | isLessThan | isLessEqual | isNumeric | isDatetime | isTrue)*>
+<!ATTLIST dynamic
+        property CDATA #IMPLIED
+        >
+
+<!ELEMENT isTrue (#PCDATA | include | isEmpty | isNotEmpty | isNotNull | isNull | isNotEqual | isEqual | isGreaterThan | isGreaterEqual | isLessThan | isLessEqual | isNumeric | isDatetime | isTrue)*>
+<!ATTLIST dynamic
+        property CDATA #IMPLIED
+        >
